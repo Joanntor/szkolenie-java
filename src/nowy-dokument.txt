@@ -1,2 +1,15 @@
 Pierwszy dokument - zmiana -> zmiana2 -> zmiana3
 zmiana w ramach branch nr3
+package pl.cyber.trainees;
+
+import java.math.BigDecimal;
+
+public class SimpleApp {
+
+    public static void main(String[] args) {
+
+    System.out.println("cześć Kamil") ;
+}
+
+
+
