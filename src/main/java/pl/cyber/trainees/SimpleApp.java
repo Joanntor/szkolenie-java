@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class SimpleApp {
     public static void main(String[] args) {
-       String firstName = "Joanna";
-       String lastName = "Tor-Martynow";
+       int a = 2;
+       int b = 3;
 
-       System.out.println(firstName + lastName);
+       System.out.println(a+b);
+
 
     }
 
