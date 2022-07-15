@@ -92,7 +92,7 @@ System.out.println(boolValue4);
          return result;
        }
 
-
+// testowa zmiana
 }
 
 
