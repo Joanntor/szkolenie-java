@@ -15,8 +15,10 @@ public class SimpleApp { //nazwa klasy. Modyfikatorem klasy jest public - co zna
             typy, deklaracja zmiennych
          */
 
-        String tekst = ""; // -> var string = "" -> string s = ""
+        int wartoscBoolean = 0; //Ta zmienna może przyjmować wartość 0 lub 1
 
+ //    Ctr + lewy przycisk myszy na "String" - wywołuje komentarz dokumentujący
+        String tekst = ""; // -> var string = "" -> string s = ""
         BigDecimal value = BigDecimal.valueOf(1);
         BigDecimal value1 = BigDecimal.ONE;
 
@@ -47,8 +49,38 @@ public class SimpleApp { //nazwa klasy. Modyfikatorem klasy jest public - co zna
 
         System.out.println("\nLiterały i \tznaki specjalne");
 
+        int intValue5 = 4000000;
+        Integer integerValue3 = Integer.valueOf( i: 4000000);
+       Integer integerValue2 = Integer.valueOf( s: "4000000");
+
+       //czemu i i s na czerowno? Nawias??
+
+       System.out.println("Integer value: " + integerValue3);
+        System.out.println("Integer value: " + integerValue2);
+
+        boolean booleanValue = false;
+        Boolean boolVal = Boolean.FALSE; // Boolean.TRUE
+        Boolean boolVal2 = Boolean.valueOf(s: "true");
+
+        System.out.println("Boolean value: " + boolVal);
+        System.out.println("Boolean value: " + boolVal2);
+
+        boolean boolValue4;
+        if (wartoscBoolean ==1) {
+            boolValue4 = true;
+        } else {
+            boolValue4 = false;
+        }
+System.out.println(boolValue4);
+
+        Double cenaDouble = 12.3;
+        Long cenaInt = Math.round(cenaDouble);
+
+        System.out.println(cenaInt);
+  //     można też zaokrąglać w inny sposób
+
     }
-    // to mi się nie wyświetla
+
 
     public static int add(int l1, int l2) {
       var result = l1 + l2;
@@ -63,9 +95,7 @@ public class SimpleApp { //nazwa klasy. Modyfikatorem klasy jest public - co zna
 
 }
 
-// ctr + lewy przycisk myszy na String - wywołuje komentarz dokumentujący
 
-//zmienne
 
 
 
