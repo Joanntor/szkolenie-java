@@ -50,17 +50,17 @@ public class SimpleApp { //nazwa klasy. Modyfikatorem klasy jest public - co zna
         System.out.println("\nLiterały i \tznaki specjalne");
 
         int intValue5 = 4000000;
-        Integer integerValue3 = Integer.valueOf( i: 4000000);
-       Integer integerValue2 = Integer.valueOf( s: "4000000");
+        Integer integerValue3 = Integer.valueOf(4000000);
+       Integer integerValue2 = Integer.valueOf("4000000");
 
-       //czemu i i s na czerowno? Nawias??
+       //czemu i i s na czerowno? Nawias?? - pojawia się z automatu
 
        System.out.println("Integer value: " + integerValue3);
         System.out.println("Integer value: " + integerValue2);
 
         boolean booleanValue = false;
         Boolean boolVal = Boolean.FALSE; // Boolean.TRUE
-        Boolean boolVal2 = Boolean.valueOf(s: "true");
+        Boolean boolVal2 = Boolean.valueOf("true");
 
         System.out.println("Boolean value: " + boolVal);
         System.out.println("Boolean value: " + boolVal2);

@@ -24,7 +24,7 @@ Zmienna (ENG. Variable) - inaczej mówiąc element języka, który pozwala przec
  Konstruktor - Specjalna metoda w klasie, która ma za zadanie tworzenia obiektu klasy w której się znajduje. Jeśli nie napiszemy swojego konstruktora, kompilator wykonuje tzw konstruktor domyślny.
 
  Konstruktor domyślny - to inaczej mówiąc konstruktor bez parametrów np.
- public class Person {
+ public class Person1 {
 
      public String forename;
      public String surname;
@@ -33,7 +33,7 @@ Zmienna (ENG. Variable) - inaczej mówiąc element języka, który pozwala przec
           /**
       * Konstruktor domyślny
       */
-     public Person() {
+     public Person1() {
 
      }
     }
