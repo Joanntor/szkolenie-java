@@ -6,6 +6,7 @@ import pl.cyber.trainees.dziedziczenie.Model;
 import pl.cyber.trainees.spotkania.Petle;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SimpleApp {
@@ -17,8 +18,20 @@ public class SimpleApp {
         var modelPojazdu2 = new Model("VW", "2020", "przód", "Passay", 10000, 2.0, Kolor.ZIELONY);
         var modelPojazdu3 = new Model("VW", "2000", "przód", "passat", 30000, 2.0,Kolor.NIEBIESKI);
 
+        List<Double> listaDouble = new ArrayList<>(Arrays.asList(
+                1.0,
+                2.0,
+                5.0,
+                10.0,
+                20.0
+
+        ));
+
+        listaDouble.add(30.0);
+
         Petle petle = new Petle ();
         petle.wyswietlOd1Do100();
+        petle.dodawanieElementowListy(listaDouble);
 
         modelPojazdu1.setKolor(Kolor.CZERWONY);
         modelPojazdu1.setPojemnoscSilnika(1.4);
