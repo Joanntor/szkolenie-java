@@ -30,6 +30,7 @@ public class Pojazd {
     // do dalszego przetwarzania
 
     public String getMarka() {
+        return marka;
 
     }
 
@@ -41,15 +42,15 @@ public class Pojazd {
     }
 
     public void setMarka(String marka) {
-        this.marka;
+        this.marka = marka;
 
     }
-    public void setRocznik(Integer rocznik){
-        this.rocznik;
+    public void setRocznik(String rocznik){
+        this.rocznik = rocznik;
     }
 
-    public void setNaped(Double naped) {
-        this.naped;
+    public void setNaped(String naped) {
+        this.naped = naped;
     }
 
 }
