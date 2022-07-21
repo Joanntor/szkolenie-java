@@ -3,35 +3,56 @@ package pl.cyber.trainees;
 
 import pl.cyber.trainees.dziedziczenie.Kolor;
 import pl.cyber.trainees.dziedziczenie.Model;
+import pl.cyber.trainees.serwis.OdczytDanych;
 import pl.cyber.trainees.spotkania.Petle;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class SimpleApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+        OdczytDanych odczytDanych = new OdczytDanych();
+        // odczytujemy dane z klawiatury
+        System.out.println("Jak masz na imię");
+        String firstName = odczytDanych.wprowadzonaWartoscZKlawiatury();
+        System.out.println("Witaj " + firstName);
+
+        String firstNameFromFile = odczytDanych.daneZPliku(new File("src/main/resources/dane-zew.txt"));
+        Model modelPojazduZPliku = odczytDanych.daneOModeluPojazdu(new File("src/main/resources/modelPojazdu.txt"));
+
+        /*
+        Alternatywa w postaci kodu na forach internetowych
+        Scanner scan = new Scanner(System.in);
+
+         */
+
+
  //       ctr + p - podpowiadanie w użyciu metod/ deklaracji obiektów dostępnych parametrów
 
         Model modelPojazdu1 = new Model();
         var modelPojazdu2 = new Model("VW", "2020", "przód", "Passay", 10000, 2.0, Kolor.ZIELONY);
         var modelPojazdu3 = new Model("VW", "2000", "przód", "passat", 30000, 2.0,Kolor.NIEBIESKI);
 
-        List<Double> listaDouble = new ArrayList<>(Arrays.asList(
-                1.0,
-                2.0,
-                5.0,
-                10.0,
-                20.0
+  //    List<Double> listaDouble = new ArrayList<>(Arrays.asList(
+   //             1.0,
+  //              2.0,
+   //             5.0,
+  //              10.0,
+  //              20.0
 
-        ));
+  //      ));
 
-        listaDouble.add(30.0);
+  //      listaDouble.add(30.0);
 
-        Petle petle = new Petle ();
-        petle.wyswietlOd1Do100();
-        petle.dodawanieElementowListy(listaDouble);
+ //       Petle petle = new Petle ();
+  //      petle.wyswietlOd1Do100();
+  //      petle.dodawanieElementowListy(listaDouble);
+  //      petle.wyswietlSet();
+
 
         modelPojazdu1.setKolor(Kolor.CZERWONY);
         modelPojazdu1.setPojemnoscSilnika(1.4);
@@ -157,8 +178,11 @@ public class SimpleApp {
             System.out.println(lista.get(1));  //wypisze "drugi"
 
        Set:
-            HashSet() -
-            TreeSet() -
+            HashSet() - nie gwarantuje kolejnosci
+            TreeSet() - gwarantuje
+
+            Set<String> nazwaSet = new HashSet<>();
+
 
      */
 }
