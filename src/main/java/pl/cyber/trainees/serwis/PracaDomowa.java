@@ -6,8 +6,9 @@ public class PracaDomowa {
     public String PracaDomowa (){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj liczbę");
-        int number = scanner.nextInt();
-        return scanner.nextLine();
+        Integer line = scanner.nextInt();
 
+        System.out.println(line);
+        return
     }
 }
