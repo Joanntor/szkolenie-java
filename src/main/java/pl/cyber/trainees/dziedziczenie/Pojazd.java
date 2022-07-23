@@ -1,6 +1,7 @@
 package pl.cyber.trainees.dziedziczenie;
 
 // nowa klasa określająca markę pojazdu
+/*
 public class Pojazd {
 
     private String marka;
@@ -39,6 +40,7 @@ public class Pojazd {
     public String getNaped(){
         return naped;
     }
-}
+} */
+
 
 
