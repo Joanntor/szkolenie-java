@@ -1,4 +1,4 @@
-package pl.cyber.trainees.dziedziczenie;
+/* package pl.cyber.trainees.dziedziczenie;
 
 // extends - słowo kluczowe stosowane przy dziedziczeniu klas
 // super - słowo kluczowe stosowane przy dziedziczeniu odnosi się do konstruktora klasy nadrzędnej
@@ -55,3 +55,4 @@ public class Model extends Pojazd {
         return kolor;
     }
 }
+*/

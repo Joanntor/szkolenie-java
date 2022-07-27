@@ -1,7 +1,7 @@
-package pl.cyber.trainees.wyjaśnienia;
+/*
+        package pl.cyber.trainees.wyjaśnienia;
 
 public class InstrukcjeWarunkowe {
-    /*
     Instrukcja warunkowa if
     Budowa IFa
      condition (boolean) - inaczej warunek sprawdzający, np. i<0, a+b = 2, 2%2 = 0 itp.
@@ -18,7 +18,7 @@ From Szkolenie Testuj to Everyone: (1:24 PM)
 
      a+b = 4 if(2+5 = 4) { <- false println("dodawanie równe 4"); } else if(2+2 = 3) { <- false println("dodawanie równe 3");  } else { println("dodawanie nie równe 4"); <- zostanie wyświetlone }
 
-     */
+
 
     //utworzyć metodę, która zwróci true/false, jeśli podana liczba w parametrze nie jest równa 10
 
@@ -35,3 +35,5 @@ From Szkolenie Testuj to Everyone: (1:24 PM)
 
 
 }
+*/
+

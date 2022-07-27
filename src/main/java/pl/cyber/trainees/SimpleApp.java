@@ -8,6 +8,7 @@ package pl.cyber.trainees; //okreslenie pakietu w ramach r]projektu, gdzie znajj
 //tu jest miejsce na importy
 // import java.io.File; //region miejsce na importy import java.io.File;  //importy zazwyczaj dodają się same ewemtualnie można je dodać poprzez Ctrl + Enter 
 // poprzez importy powinniśmy rozumieć użycie dodatkowych bibliotek w naszej klasie/
+import pl.cyber.trainees.przykłady.Homework;
 import pl.cyber.trainees.wyjaśnienia.Basics;
 
 import java.math.*;
@@ -53,6 +54,8 @@ public class SimpleApp {
 
         Basics basics = new Basics();
         basics.wyswietlTekst("Jakiś teks do wyświetlenia");
+
+        Homework Homework = new Homework();
 
 
     }
