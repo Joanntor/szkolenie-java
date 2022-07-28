@@ -1,5 +1,6 @@
 package pl.cyber.trainees.przykłady;
 
+import static java.lang.Math.pow;
 import static org.apache.coyote.http11.Constants.a;
 
 public class Homework {
@@ -45,18 +46,46 @@ public String imie () {
  // 4. Napisz metodę, która jako argument przyjmuje liczbę
     // i zwraca true jeśli liczba jest podzielna przez 3 i przez 5,
 
-    public static void czyLiczbaDzieliSięPrzez3i5 (){
+    public boolean czyLiczbaDzieliSięPrzez3i5 (){
         var a = 33495;
         var b = 5;
         var c = 5677;
 
-        boolean result1 = a == % 3 && % 5;
-        boolean result2 = b == % 3 && % 5;
-        boolean result3 = c == % 3 && % 5;
+        boolean result1 = (a % 3 &&  % 5);
+        boolean result2 = (b % 3 && % 5);
+        boolean result3 = (c % 3 && % 5);
 
+       // lub
+
+        public boolean warunekPodzielnosc3i5 (Integer Object liczba); {
+            if (liczba == %3 && %5)
+            System.out.println("True - liczba dzieli się przez 3 i 5");
+        } else{
+            System.out.println("False");
+        }
 
 
     }
+//5. Napisz metodę, która jako argument przyjmuje liczbę i zwraca go podniesionego do 3 potęgi,
+  //  podniesienie do potęgi realizujemy przez bibliotekę Math i jej metodę pow(liczba, doJakiejPotęgi)
+// np. Math.pow(2,3)
+
+    public void doPotegi(Integer liczbaDoPotegi) {
+
+        return Math.pow(Integer liczbaDoPotegi);
+
+    }
+// 6. Napisz metodę, która jako argument przyjmuje liczbę i zwraca jej pierwiastek kwadratowy
+  //  pierwiastek kwadratowy realizujemy przez bibliotekę Math i jej metodę sqrt(number)
+// Math.sqrt(number)
+
+    public void pierwiastekKwadr (double liczba); {
+
+       return Math.sqrt(double liczba);
+
+    }
+
+
 
  }
  /*
@@ -64,10 +93,6 @@ public String imie () {
 
 
 
-5. Napisz metodę, która jako argument przyjmuje liczbę i zwraca go podniesionego do 3 potęgi,
-podniesienie do potęgi realizujemy przez bibliotekę Math i jej metodę pow(liczba, doJakiejPotęgi)
-np. Math.pow(2,3)
-6. Napisz metodę, która jako argument przyjmuje liczbę i zwraca jej pierwiastek kwadratowy
-pierwiastek kwadratowy realizujemy przez bibliotekę Math i jej metodę sqrt(number)
-Math.sqrt(number)
+
+
   */
