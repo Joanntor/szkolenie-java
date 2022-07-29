@@ -22,7 +22,7 @@ import java.sql.SQLOutput;
 
 public class SimpleApp {
 
-    // tu musi być cały kod i wszystkie metody. Trzeba pamiętać, żeby zgadzała się liczba nawiasów
+// tu musi być cały kod i wszystkie metody. Trzeba pamiętać, żeby zgadzała się liczba nawiasów
     // często trzeba stosować czyszczenie kodu reformat code (chyba comand l? <-- sprawdzić
 // w ramach klasy deklarujemy zmienne globalne oraz metody
     public static String SEPARATOR_SPACJA = ""; // zmienna globalna dostępna w całej klasie.
@@ -73,7 +73,7 @@ public class SimpleApp {
         //używanie instrukcji warunkowych
         // używanie pętli
         // używanie innych metod lub odwołanie do metod innych klas poprzez wcześniejszą deklarację
-        return 0;
+         return 0;
 
     }
     // w tym miejscu możemy deklarować kolejne metody, ich ilość jest dowolna
