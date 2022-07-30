@@ -9,5 +9,7 @@ public class BasicInteger {
     // String -> "Wynik dodawania: "
     //Integer -> liczba, którą będziemy dodawać
 
-    public void wyswietlenieSumyLiczb
+    public void wyswietlenieSumyLiczb() {
+
+    }
 }

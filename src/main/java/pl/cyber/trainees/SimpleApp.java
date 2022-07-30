@@ -9,6 +9,7 @@ package pl.cyber.trainees; //okreslenie pakietu w ramach r]projektu, gdzie znajj
 // import java.io.File; //region miejsce na importy import java.io.File;  //importy zazwyczaj dodają się same ewemtualnie można je dodać poprzez Ctrl + Enter 
 // poprzez importy powinniśmy rozumieć użycie dodatkowych bibliotek w naszej klasie/
 import pl.cyber.trainees.wyjaśnienia.Basics;
+import pl.cyber.trainees.wyjaśnienia.Petle;
 
 import java.math.*;
 import java.sql.SQLOutput;
@@ -47,6 +48,8 @@ public class SimpleApp {
     // ale z reguły powinna być to tablica args (tj. String[] args)
 
     public static void main(String[] args) {
+        Petle petle = new Petle();
+        petle.uruchom();
         // UWAGA należy pilnować {} metody, aby aby nie pisać tzw. metody w metodzie
         // w ramach metody uruchomieniowej możemy deklarować zmienne oraz pisać kod,
         // natomiast dobrą praktyką jest, aby
@@ -83,6 +86,7 @@ public class SimpleApp {
     }
     // w tym miejscu możemy deklarować kolejne metody, ich ilość jest dowolna
     // zalecana wielkość klasy nie powinna przekroczyć 200 linii pliku
+
 }
 
 

@@ -24,9 +24,12 @@ From Szkolenie Testuj to Everyone: (1:24 PM)
 
     public boolean czyLiczbaTo10 (Integer liczba){
       if(liczba == 10) {
-        System.out.println("True");}
+        System.out.println("True");
+      return true;
+      }
       else {
           System.out.println("False");
+          return false;
 
       }
 
