@@ -152,6 +152,7 @@ public class Petle {
             }
 
         }
+        // koniec
 
         System.out.println(sumaLiczb);
     }
