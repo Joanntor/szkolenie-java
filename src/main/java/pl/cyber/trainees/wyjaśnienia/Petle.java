@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Petle {
     /*
@@ -58,6 +59,8 @@ public class Petle {
         choinkaRozbudowana(7);
         wyswietlanieLiczb();
         pierwszyProgramWhile();
+        silniaProsta();
+        System.out.println("wynik: " + silniaRekurencja(4));
 
 
     }
@@ -158,6 +161,7 @@ public class Petle {
 
         System.out.println(sumaLiczb);
     }
+
     /*
     WHILE oraz  do While
     while - słowo kluczowe określające deklarację pętli while
@@ -171,38 +175,41 @@ public class Petle {
         do {
           //blok kodu } while(condition)
              */
-    public void pierwszyProgramWhile () {
+    public void pierwszyProgramWhile() {
         int liczba = 0;
-        while(liczba < 1) {
+        while (liczba < 1) {
             System.out.println("while, to jest liczba: " + liczba);
             liczba++;
-        }do {
+        }
+        do {
             System.out.println("do-while to jest liczba: " + liczba);
             liczba++;
         } while (liczba <= 23);
 
     }
+
     //wykonać for od 1 do 10 wyświetlić sumęFor i następnie wykonać to samo przy użyciu while/do-while
     // oraz wykorzystać if do porównania liczb, jeśli się uzgodnią (będą sobie równe)
     // to wyświetlamy true w przeciwnym wypadku false
-    private void sumaLiczbZForiWhile () {
+    private void sumaLiczbZForiWhile() {
         Integer sumaFor = 0;
         Integer sumaWhile = 0;
         Integer licznikWhile = 0;
 
-        for (int i = 0; i <= 10; i++); {
+        for (int i = 0; i <= 10; i++) ;
+        {
             sumaFor += 1;
         }
-        while (licznikWhile <=10) {
+        while (licznikWhile <= 10) {
             sumaWhile += licznikWhile;
 
             licznikWhile++;
         }
 
         System.out.println("Suma For:" + sumaFor);
-        System.out.println("Suma While:"+ sumaWhile);
+        System.out.println("Suma While:" + sumaWhile);
 
-        if(sumaFor == sumaWhile) {
+        if (sumaFor == sumaWhile) {
             System.out.println(true);
         } else {
             System.out.println(false);
@@ -211,8 +218,6 @@ public class Petle {
     }
 
 
-}
-
 // do domu metode tylko podzielne przerobić na konstrukcję while
 
 // do domu metodę public void tylkoPodzielne()
@@ -220,6 +225,47 @@ public class Petle {
 // zmienna o wartosci 1, wykozystaj while.
 // Podnos licznik x2 do momentu aż liczba nie przekroczy 100
 // oraz wyswietl ile razy pętla sięwykonała
+
+
+    private void silniaProsta() {
+        Scanner scan = new Scanner(System.in);
+        Integer n = scan.nextInt();
+        Integer s = 1;
+        Integer i = 1;
+
+        System.out.println("Jestem przed While i: " + i + "n:" + n + "s" + s);
+        while (i <= n) {
+            System.out.println("Jestem w While i: " + "n" + n + "s" + s + "Wykonuje mnożenie oraz podniesienie (dodawanie) i o 1");
+            s = s * i;
+            i = i + 1;
+            System.out.println("jestem na końcu przebiegu While i: " + i + "n" + n + "s " + s);
+        }
+        System.out.println("n! wynosi " + s);
+
+        s = 1;
+        for (int j = 1; j <= n; j++) {
+            s = s * j;
+        }
+        System.out.println("n! wynosi " + s);
+
+    }
+
+    private Integer silniaRekurencja(Integer n) {
+
+        if (n > 1) {
+
+                    return n * silniaRekurencja(n - 1);
+                }
+        else {
+                return 1;
+
+            }
+
+            }
+
+
+}
+
 
 
 
