@@ -56,11 +56,12 @@ public class SimpleApp {
         // w ramach metody uruchomieniowej możemy deklarować zmienne oraz pisać kod,
         // natomiast dobrą praktyką jest, aby
 
-        Basics basics = new Basics();
-        basics.wyswietlTekst("Jakiś teks do wyświetlenia");
+//        Basics basics = new Basics();
+//        basics.wyswietlTekst("Jakiś teks do wyświetlenia");
+//
+//        InstrukcjeWarunkowe instrukcjeWarunkowe = new InstrukcjeWarunkowe();
+//        instrukcjeWarunkowe.uruchom();
 
-        InstrukcjeWarunkowe instrukcjeWarunkowe = new InstrukcjeWarunkowe();
-        instrukcjeWarunkowe.uruchom();
 
 
 

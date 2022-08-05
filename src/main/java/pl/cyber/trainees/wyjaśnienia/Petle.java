@@ -1,6 +1,7 @@
 package pl.cyber.trainees.wyjaśnienia;
 
 import java.math.BigDecimal;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,6 +57,7 @@ public class Petle {
         choinkaProsta();
         choinkaRozbudowana(7);
         wyswietlanieLiczb();
+        pierwszyProgramWhile();
 
 
     }
@@ -156,6 +158,69 @@ public class Petle {
 
         System.out.println(sumaLiczb);
     }
+    /*
+    WHILE oraz  do While
+    while - słowo kluczowe określające deklarację pętli while
+    do - słowo kluczowe określające deklarację pętli do-while
+    (condition) - warunek, który określa nam zakończenie działania pętli, aby pętla pętla while zadziałała, to pierwsze sprawdzenie musi się spełnić
+    {} - rozpoczęcie i zakończenie bloku / struktury pętli w ramach tych nawiasów znajduje się kod funkcji, którą ma wykonać program
+    STRUKTURA DO ZAPAMIĘTANIA:
+      while(condition) {
+      //blok kodu
+       }
+        do {
+          //blok kodu } while(condition)
+             */
+    public void pierwszyProgramWhile () {
+        int liczba = 0;
+        while(liczba < 1) {
+            System.out.println("while, to jest liczba: " + liczba);
+            liczba++;
+        }do {
+            System.out.println("do-while to jest liczba: " + liczba);
+            liczba++;
+        } while (liczba <= 23);
+
+    }
+    //wykonać for od 1 do 10 wyświetlić sumęFor i następnie wykonać to samo przy użyciu while/do-while
+    // oraz wykorzystać if do porównania liczb, jeśli się uzgodnią (będą sobie równe)
+    // to wyświetlamy true w przeciwnym wypadku false
+    private void sumaLiczbZForiWhile () {
+        Integer sumaFor = 0;
+        Integer sumaWhile = 0;
+        Integer licznikWhile = 0;
+
+        for (int i = 0; i <= 10; i++); {
+            sumaFor += 1;
+        }
+        while (licznikWhile <=10) {
+            sumaWhile += licznikWhile;
+
+            licznikWhile++;
+        }
+
+        System.out.println("Suma For:" + sumaFor);
+        System.out.println("Suma While:"+ sumaWhile);
+
+        if(sumaFor == sumaWhile) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+
+    }
+
+
 }
+
+// do domu metode tylko podzielne przerobić na konstrukcję while
+
+// do domu metodę public void tylkoPodzielne()
+// { przerobić na while.
+// zmienna o wartosci 1, wykozystaj while.
+// Podnos licznik x2 do momentu aż liczba nie przekroczy 100
+// oraz wyswietl ile razy pętla sięwykonała
+
+
 
 
