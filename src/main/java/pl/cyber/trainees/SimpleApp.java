@@ -10,6 +10,7 @@ package pl.cyber.trainees; //okreslenie pakietu w ramach r]projektu, gdzie znajj
 // poprzez importy powinniśmy rozumieć użycie dodatkowych bibliotek w naszej klasie/
 import pl.cyber.trainees.wyjaśnienia.Basics;
 import pl.cyber.trainees.wyjaśnienia.InstrukcjeWarunkowe;
+import pl.cyber.trainees.wyjaśnienia.Obiekty;
 import pl.cyber.trainees.wyjaśnienia.Petle;
 
 import java.math.*;
@@ -49,8 +50,11 @@ public class SimpleApp {
     // ale z reguły powinna być to tablica args (tj. String[] args)
 
     public static void main(String[] args) {
-        Petle petle = new Petle();
-        petle.uruchom();
+      //  Petle petle = new Petle();
+       // petle.uruchom();
+        Obiekty obiekty = new Obiekty();
+        obiekty.uruchom();
+
 
         // UWAGA należy pilnować {} metody, aby aby nie pisać tzw. metody w metodzie
         // w ramach metody uruchomieniowej możemy deklarować zmienne oraz pisać kod,
