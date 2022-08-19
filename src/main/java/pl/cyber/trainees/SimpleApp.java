@@ -12,6 +12,7 @@ import pl.cyber.trainees.wyjaśnienia.Basics;
 import pl.cyber.trainees.wyjaśnienia.InstrukcjeWarunkowe;
 import pl.cyber.trainees.wyjaśnienia.Obiekty;
 import pl.cyber.trainees.wyjaśnienia.Petle;
+import pl.cyber.trainees.wyjaśnienia.bankomat.BankomatService;
 
 import java.math.*;
 import java.sql.SQLOutput;
@@ -52,8 +53,13 @@ public class SimpleApp {
     public static void main(String[] args) {
       //  Petle petle = new Petle();
        // petle.uruchom();
-        Obiekty obiekty = new Obiekty();
-        obiekty.uruchom();
+      //  Obiekty obiekty = new Obiekty();
+       // obiekty.uruchom();
+
+        BankomatService service = new BankomatService ();
+        service.uruchom ();
+
+
 
 
         // UWAGA należy pilnować {} metody, aby aby nie pisać tzw. metody w metodzie
