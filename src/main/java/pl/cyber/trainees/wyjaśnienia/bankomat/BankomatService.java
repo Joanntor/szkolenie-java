@@ -1,6 +1,7 @@
 package pl.cyber.trainees.wyjaśnienia.bankomat;
 
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class BankomatService {
@@ -9,20 +10,47 @@ public class BankomatService {
 
 
     private boolean menu(final Integer pozycja) {
-        switch (pozycja){
-            case 1:
-                System.out.println("Wpłacam gotówkę");
-                break;
-            case 2:
-                System.out.println("Wypłacam gotówkę");
-                break;
-            case 3:
-                System.out.println("Stan konta");
-                System.out.println("Bankomat posiada: " + bankomat.stanKonta());
-                break;
-        }
+                Integer kwota = 0;
+                try {
+
+                switch (pozycja) {
+                    case 1:
+                        System.out.println("Wpłacam gotówkę");
+                        System.out.println("Proszę podać kwotę wpłaty");
+                        kwota = scanUser.nextInt();
+                        sprawdzWprowadzaneKwoty(kwota);
+                        bankomat.wplacGotowke(kwota);
+                        break;
+                    case 2:
+                        System.out.println("Wypłacam gotówkę");
+                        System.out.println("Proszę podać kwotę wypłaty: ");
+                        kwota = scanUser.nextInt();
+                        sprawdzWprowadzaneKwoty(kwota);
+
+                        bankomat.sprawdzWyplate(kwota);
+                        bankomat.wyplacGotowke(kwota);
+                        break;
+                    case 3:
+                        System.out.println("Stan konta");
+                        System.out.println("Bankomat posiada: " + bankomat.stanKonta());
+                        break;
+                }
+            } catch (InputMismatchException e){
+                    throw new BusinessException("Nie podano prawidłowej liczby odnoszącej się do wpłaty/wypłaty.");
+
+                }
+
         return pozycja != 4;
 
+    }
+    private void sprawdzWprowadzaneKwoty (final Integer kwota) {
+        List<Integer> lista = List.of(10, 20, 50, 100, 200, 500);
+
+        if (!lista.contains(kwota)) {
+            // "!" co mam robić, jeśli kwota nie zawiera się w liście
+            throw new BusinessException("Wprowadż poprawną kwotę z zakresu " + lista);
+
+        }
     }
 
 
