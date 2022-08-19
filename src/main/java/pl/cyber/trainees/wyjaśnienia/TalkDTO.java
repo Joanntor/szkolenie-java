@@ -28,13 +28,11 @@ public class TalkDTO {   // obiekt
 
     private final String tematRozmowy;
     public String opis;  // bez modyfikatora private i ustawienia zmiennej jako final możemy dopuścić sytuację,
-                          //  w której nieświadomie damy możliwość wartości parametru klasy
+    //  w której nieświadomie damy możliwość wartości parametru klasy
     private List<String> przyklady;   // parametry
 
     public String getTematRozmowy() {
         return tematRozmowy;
-
-
     }
 
     public String getOpis() {
@@ -58,8 +56,12 @@ public class TalkDTO {   // obiekt
         this.opis = opis;
         this.przyklady = przyklady;
     }
-    public void modifyList(List<String > wiecejPrzykladow) {
+
+    public void modifyList(List<String> wiecejPrzykladow) {
         this.przyklady.addAll(wiecejPrzykladow);
+
+
+
     }
 }
 

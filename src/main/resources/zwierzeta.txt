@@ -1,0 +1,2 @@
+PIES,Goldi,2020/05/10,14,Mariusz,250,true
+KOT,Felix,2012/07/25,14,Joanna,45,false
