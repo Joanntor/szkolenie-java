@@ -1,5 +1,6 @@
 package pl.cyber.trainees.wyjaśnienia.bankomat;
 
+import java.sql.SQLOutput;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -7,6 +8,7 @@ import java.util.Scanner;
 public class BankomatService {
     Scanner scanUser = new Scanner(System.in);
     Bankomat bankomat = new Bankomat ();
+
 
 
     private boolean menu(final Integer pozycja) {
@@ -54,7 +56,7 @@ public class BankomatService {
     }
 
 
-    public void uruchom() {
+    public void uruchomRoziwazanie1() {
         boolean czyKontynuowac;
 
         do {
@@ -75,4 +77,93 @@ czyKontynuowac = menu(userInfo);
         } while (czyKontynuowac);
 
     }
+    public void uruchomRozwiazanie2(){
+        List<Karta> karty = List.of(
+                new Karta(12345678, 1234, 1000),
+                new Karta(33345678, 9876, 2000)
+        );
+    boolean czyKontynuowac;
+    boolean czyPrawidlowaKarta = false;
+    Karta karta = null;
+
+        System.out.println("Włóż kartę");
+        Integer nrKarty = scanUser.nextInt();
+        System.out.println("Wprowadź PIN dla karty");
+        Integer pinKarty = scanUser.nextInt();
+
+        for (Karta el : karty) {     // Karta to element zbioru karty
+            if (el.getNrKarty().equals(nrKarty)) {
+                el.sprawdzNrPin(pinKarty);
+                czyPrawidlowaKarta = true;
+                karta = el;
+
+
+            }
+
+        }
+
+        if (! czyPrawidlowaKarta || karta == null) {
+            throw new BusinessException("Wprowadzono błędne dane kaert. ");
+        }
+
+
+        do {
+        System.out.println("Wybierz dostępną opcję:");
+        System.out.println("1. Wpłać Gotówkę");
+        System.out.println("2. Wypłać Gotówkę");
+        System.out.println("3. Sprawdź stan konta");
+        System.out.println("4. Sprawdź stan konta karty");
+        System.out.println("0. Przerwij Operację");
+
+        Integer userInfo = 0;
+        try {
+            userInfo = scanUser.nextInt();
+        } catch (InputMismatchException e) {
+            throw new BusinessException("Nie podano prawidłowej liczby z menu.");
+        }
+        czyKontynuowac = menu2(userInfo);
+
+    } while (czyKontynuowac);
+
 }
+
+    private boolean menu2(final Integer pozycja) {
+        Integer kwota = 0;
+
+        try {
+            switch (pozycja) {
+                case 1:
+                    System.out.println("Wpłacam gotówkę");
+
+                    System.out.print("Proszę podać kwotę wpłaty: ");
+                    kwota = scanUser.nextInt();
+                    sprawdzWprowadzaneKwoty(kwota);
+
+                    bankomat.wplacGotowke(kwota);
+                    break;
+
+                case 2:
+                    System.out.println("Wypłacam gotówkę");
+                    System.out.print("Proszę podać kwotę wypłaty: ");
+                    kwota = scanUser.nextInt();
+                    sprawdzWprowadzaneKwoty(kwota);
+
+                    bankomat.sprawdzWyplate(kwota);
+                    bankomat.wyplacGotowke(kwota);
+
+                    break;
+
+                case 3:
+                    System.out.println("Stan konta");
+                    System.out.println("Bankomant posiada: " + bankomat.stanKonta());
+                    break;
+            }
+        } catch (InputMismatchException e) {
+            throw new BusinessException("Nie podano prawidłowej liczby odnoszącej się do wpłaty/wypłaty.");
+        }
+        return pozycja !=0;
+    }
+
+
+}
+
