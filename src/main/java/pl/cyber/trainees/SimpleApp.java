@@ -57,7 +57,7 @@ public class SimpleApp {
        // obiekty.uruchom();
 
         BankomatService service = new BankomatService ();
-        service.uruchom ();
+        service.uruchomRozwiazanie2 ();
 
 
 
@@ -105,6 +105,14 @@ public class SimpleApp {
     // zalecana wielkość klasy nie powinna przekroczyć 200 linii pliku
 
 }
+
+/*
+Testy jednostkowe
+Rodzaje:
+- JUnit
+- Spook // Groovy
+testujemy metody poszczególne, ale niekoniecznie main
+ */
 
 
 

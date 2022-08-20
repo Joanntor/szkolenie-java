@@ -22,5 +22,25 @@ public class Karta {
     }
 
     public Object getNrKarty() {
+        return nrKarty;
+    }
+
+    public void wplacGotowke(final Integer kwota) {
+        this.saldo +=kwota;
+    }
+
+    public void sprawdzWyplate(final Integer kwota) {
+        if (this.saldo - kwota <0) {
+            throw new KartaException("Niewystarczająca ilość środków na karcie");
+        }
+    }
+
+    public void wyplacGotowke(final Integer kwota) {
+        this.saldo -= kwota;
+    }
+
+    public Integer stanKonta() {
+        return this.saldo;
+
     }
 }
