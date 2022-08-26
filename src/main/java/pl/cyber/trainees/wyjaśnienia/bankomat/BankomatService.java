@@ -1,14 +1,14 @@
 package pl.cyber.trainees.wyjaśnienia.bankomat;
 
-import java.sql.SQLOutput;
 import java.util.InputMismatchException;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class BankomatService {
     Scanner scanUser = new Scanner(System.in);
     Bankomat bankomat = new Bankomat ();
+
+
 
 
 
@@ -179,22 +179,14 @@ Alternatywa w postaci strumienia danych
 
                     System.out.print("Proszę podać kwotę wpłaty: ");
                     kwota = scanUser.nextInt();
-                    sprawdzWprowadzaneKwoty(kwota);
 
-                    bankomat.wplacGotowke(kwota);
-                    karta.wplacGotowke(kwota);
                     break;
 
                 case 2:
                     System.out.println("Wypłacam gotówkę");
                     System.out.print("Proszę podać kwotę wypłaty: ");
                     kwota = scanUser.nextInt();
-                    sprawdzWprowadzaneKwoty(kwota);
 
-                    bankomat.sprawdzWyplate(kwota);
-                    karta.sprawdzWyplate(kwota);
-                    bankomat.wyplacGotowke(kwota);
-                    karta.wyplacGotowke(kwota);
 
                     break;
 
@@ -214,7 +206,19 @@ Alternatywa w postaci strumienia danych
         }
         return pozycja !=0;
     }
+private void dokonajWplaty (final Integer kwota, Karta karta){
+    sprawdzWprowadzaneKwoty(kwota);
 
+    bankomat.wplacGotowke(kwota);
+    karta.wplacGotowke(kwota);
+}
+private void dokonajWyplaty (final Integer kwota, Karta karta) {
+    sprawdzWprowadzaneKwoty(kwota);
 
+    bankomat.sprawdzWyplate(kwota);
+    karta.sprawdzWyplate(kwota);
+    bankomat.wyplacGotowke(kwota);
+    karta.wyplacGotowke(kwota);
+}
 }
 
